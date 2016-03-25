@@ -1,3 +1,38 @@
+var outputCSS = [{
+    selector: '.User-list',
+    rules: [
+        'list-style: none'
+    ]
+  },{
+    selector: '.Avatar',
+    rules: [
+        'text-align: center'
+    ]
+  },{
+    selector: '.Avatar img',
+    rules: [
+        'width: 50px',
+        'height: 50px',
+        'border-radius: 50%'
+    ]
+  },{
+    selector: '.Avatar h4',
+    rules: [
+        'text-transform: capitalize',
+        'color: red'
+    ]
+  }];
+
+
+function addCss() {
+  for(var i = 0; i < outputCSS.length; i++) {
+    var outputColorStyleSheet = outputCSS[i].selector + outputCSS[i].rules.join(';');
+    angular.element(document).find('head').prepend('<style type="text/css">' + outputColorStyleSheet + '</style>');
+  }
+}
+
+addCss();
+
 /**
  * 1. We have added a directive with the name 'avatar' and handler of
  * avatarDirective to our angular app module
