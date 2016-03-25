@@ -30,9 +30,7 @@ function addCss() {
     angular.element(document).find('head').prepend('<style type="text/css">' + outputColorStyleSheet + '</style>');
   }
 }
-
 addCss();
-
 /**
  * 1. We have added a directive with the name 'avatar' and handler of
  * avatarDirective to our angular app module
@@ -40,22 +38,6 @@ addCss();
 angular.module('app', [])
   .controller('mainCtrl', mainCtrl)
   .directive('avatar', avatarDirective);
-
-function mainCtrl ($scope) {
-
-  $scope.users = [];
-
-  $scope.addNew = function (user) {
-    $scope.users.push({ 
-      name: user.name,
-      avatarUrl: user.url
-    }); /* [1] */
-    
-    user.name = ''; /* [2] */
-    user.url = '';
-  };
-}
-
 /**
  * 1. this defines the api of our avatar directive. This means we are
  * expecting a user property whose value should be interpreted as an object.
@@ -82,4 +64,20 @@ function avatarDirective () {
     }
   }
 
+}
+
+
+function mainCtrl ($scope) {
+
+  $scope.users = [];
+
+  $scope.addNew = function (user) {
+    $scope.users.push({ 
+      name: user.name,
+      avatarUrl: user.url
+    }); /* [1] */
+    
+    user.name = ''; /* [2] */
+    user.url = '';
+  };
 }
