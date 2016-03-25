@@ -43,6 +43,11 @@
       -->
       <button type='submit'>Add New</button>
     </form>
+    <ul class='User-list'>
+      <li ng-repeat='user in users'>
+        <avatar user='user' />
+      </li>
+    </ul>
   </div>
 </body>
 </html>
