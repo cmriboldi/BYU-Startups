@@ -37,7 +37,7 @@ function avatarDirective () {
       user: '=' /* [1] */
     },
     restrict: 'E', /* [2] */
-    template: 'avatar.html', /* [3] */
+    templateUrl: 'avatar.html', /* [3] */
     link: link
   };
   
