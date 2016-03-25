@@ -37,12 +37,7 @@ function avatarDirective () {
       user: '=' /* [1] */
     },
     restrict: 'E', /* [2] */
-    template: (
-      '<div class="Avatar">' +
-        '<img ng-src="{{user.avatarUrl}}" />' +
-        '<h4>{{user.name}}</h4>' +
-      '</div>'
-    ), /* [3] */
+    template: 'avatar.html', /* [3] */
     link: link
   };
   
