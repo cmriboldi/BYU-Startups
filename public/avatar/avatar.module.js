@@ -26,7 +26,7 @@ var outputCSS = [{
 
 function addCss() {
   for(var i = 0; i < outputCSS.length; i++) {
-    var outputColorStyleSheet = outputCSS[i].selector + outputCSS[i].rules.join(';');
+    var outputColorStyleSheet = outputCSS[i].selector + '{' + outputCSS[i].rules.join(';') + '}';
     angular.element(document).find('head').prepend('<style type="text/css">' + outputColorStyleSheet + '</style>');
   }
 }
