@@ -20,6 +20,11 @@ router.post('/login', passport.authenticate('login', {
     failureRedirect: '/'
 }));
 
+/* GET Login Page */
+router.get('/login', function(req, res){
+    res.render('login');
+});
+
 /* GET Registration Page */
 router.get('/signup', function(req, res){
     res.render('signup');
