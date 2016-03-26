@@ -4,7 +4,7 @@ var router = express.Router();
 var isLoggedin = function (req, res, next) {
 if (req.isAuthenticated())
     return next();
-res.render('login', {title : "Login Page"});
+res.render('login');
 }
 
 module.exports = function(passport){
