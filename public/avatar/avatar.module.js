@@ -78,6 +78,6 @@ function mainCtrl ($scope) {
     }); /* [1] */
     
     user.name = ''; /* [2] */
-    user.url = '';
+    user.url = ''; /* [2] */
   };
 }
