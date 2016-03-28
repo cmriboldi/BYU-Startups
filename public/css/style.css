@@ -8,6 +8,76 @@ a {
   color: #00B7FF;
 }
 
+.hero {
+
+    .hero-wrapper {
+      position: relative;
+      top: 10px;
+      height: 550px;
+
+      @media (max-width: 600) {
+        height: 450px;
+      }
+
+      .info {
+        position: absolute;
+        top: 100px;
+        width: 350px;
+        @media (max-width: 350px) {
+          width: 100%;
+          top: 20px;
+        }
+
+        .info-title {
+          line-height: 120%;
+          font-size: 40px;
+        }
+
+        .info-subtitle {
+          margin-top: 10px;
+          line-height: 120%;
+          font-size: 18px;
+        }
+
+        .info-learn-more {
+          margin-top: 15px;
+          cursor: pointer;
+        }
+      }
+
+      .hero-shot {
+        position: absolute;
+        left: 10%;
+        top: 0px;
+        width: 90%;
+
+        @media (max-width: $screen-md-max) {
+          top: 40px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          top: 80px;
+        }
+
+        @media (max-width: $screen-xs-max) {
+          top: 120px;
+        }
+
+        @media (max-width: 680px) {
+          /*//after it gets below this point, it starts
+          //to collide with the text.*/
+          top: 200px;
+        }
+
+        @media (max-width: 600px) {
+          top: 240px;
+        }
+      }
+    }
+
+  }
+
+
 .midsection {
   background-color: #F2F2F2;
   text-align: center;
