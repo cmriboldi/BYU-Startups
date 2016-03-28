@@ -1,8 +1,20 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
 }
 
 a {
   color: #00B7FF;
+}
+
+.midsection {
+  background-color: #F2F2F2;
+  text-align: center;
+
+  .midsection-title {
+    display: block;
+    margin: 50px auto 10px auto;
+    font-size: 30px;
+  }
 }
