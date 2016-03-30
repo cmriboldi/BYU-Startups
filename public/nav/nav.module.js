@@ -16,6 +16,7 @@ angular.module('navApp', [])
  * we go ahead and give it a default
  */
 function navDirective () {
+  console.log("init Directive");
   return {
     scope: {
       loggedIn: '=' /* [1] */
