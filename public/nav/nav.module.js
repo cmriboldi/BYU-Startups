@@ -2,7 +2,7 @@
  * 1. We have added a directive with the name 'nav' and handler of
  * avatarDirective to our angular app module
  */
-angular.module('app', [])
+angular.module('navApp', [])
   .controller('navCtrl', navCtrl)
   .directive('nav-bar', navDirective);
 /**
