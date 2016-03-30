@@ -11,7 +11,7 @@ module.exports = function(passport){
 
 /* GET login page. */
 router.get('/', function(req, res){
-    res.render('index', { title: 'BYU Startups' });
+    res.render('index', { title: 'BYU Startups', loggedIn: req.isAuthenticated() });
 });
 
 /* Handle Login POST */
