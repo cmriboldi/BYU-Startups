@@ -42,10 +42,7 @@
       </form>
       <ul class='User-list'>
         <li ng-repeat='user in users'>
-          <div class='Avatar'>
-            <img ng-src='{{user.avatarUrl}}' />
-            <h4>{{user.name}}</h4>
-          </div>
+          <avatar user='user' />
         </li>
       </ul>
     </div>
