@@ -1,11 +1,15 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
 }
 
 a {
   color: #00B7FF;
+}
+
+div {
+  display: block;
 }
 
 .hero {
@@ -24,16 +28,9 @@ a {
           top: 20px;
         }
 
-        .info-title {
-          line-height: 120%;
-          font-size: 40px;
-        }
 
-        .info-subtitle {
-          margin-top: 10px;
-          line-height: 120%;
-          font-size: 18px;
-        }
+
+
 
         .info-learn-more {
           margin-top: 15px;
@@ -51,6 +48,15 @@ a {
     }
 
   }
+  .info-title {
+    line-height: 120%;
+    font-size: 40px;
+  }
+  .info-subtitle {
+    margin-top: 10px;
+    line-height: 120%;
+    font-size: 18px;
+  }
 
 
 .midsection {
@@ -65,4 +71,22 @@ a {
   display: block;
   margin: 50px auto 10px auto;
   font-size: 30px;
+}
+
+.banner {
+    background: #71A6D6;
+    color: white;
+    text-align: center;
+
+}
+.banner-wrapper {
+  display: block;
+  margin: 50px auto;
+
+  width: 500px;
+}
+.banner-title {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
