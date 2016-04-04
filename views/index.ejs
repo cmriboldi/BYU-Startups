@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='navApp'>
   <head>
     <title>Splash Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
@@ -7,53 +7,54 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="nav/nav.module.js"></script>
   </head>
-  <body ng-app='navApp' ng-controller='navCtrl'>
-    <nav-header></nav-header>
-    <div class="hero">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="info-title">Description here </div>
-            <div class="info-subtitle">Subdescription here</div>
-          </div>
-          <div class="col-md-8">
-            <div class="hero-wrapper">
-              <img class="hero-shot" src="img/hero-shot-tester.png" alt="hero picture">
+  <body>
+    <div ng-controller='navCtrl'>
+      <nav-header></nav-header>
+      <div class="hero">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="info-title">Description here </div>
+              <div class="info-subtitle">Subdescription here</div>
+            </div>
+            <div class="col-md-8">
+              <div class="hero-wrapper">
+                <img class="hero-shot" src="img/hero-shot-tester.png" alt="hero picture">
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="midsection">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="midsection-title"> Start connecting with others at your school, with ideas or without </div>
+      <div class="midsection">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="midsection-title"> Start connecting with others at your school, with ideas or without </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <h1>This is the info page</h1>
-    You can create an account
-    <a href="/signup">here</a>
-    Or you can sign in by going
-    <a href="/login">here</a>
-    Or click
-    <a href="/profile">here</a>
-    to go directly to my profile.
+      <h1>This is the info page</h1>
+      You can create an account
+      <a href="/signup">here</a>
+      Or you can sign in by going
+      <a href="/login">here</a>
+      Or click
+      <a href="/profile">here</a>
+      to go directly to my profile.
 
-    <div class="banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+      <div class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+            </div>
           </div>
         </div>
       </div>
+
+
+
     </div>
-    
-
-
-
   </body>
 </html>
