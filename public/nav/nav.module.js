@@ -17,10 +17,13 @@ angular.module('navApp', [])
  */
 function navDirective () {
   console.log("init Directive");
+  
+  
   return {
     scope: {
-      loggedIn: '=' /* [1] */
+      loggedIn: "=loggedIn" /* [1] */
     },
+    
     restrict: 'E', /* [2] */
     templateUrl: 'nav/nav.html'
   };
