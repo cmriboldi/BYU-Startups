@@ -4,7 +4,7 @@
  */
 angular.module('navApp', [])
   .controller('navCtrl', navCtrl)
-  .directive('nav-header', navDirective);
+  .directive('navHeader', navDirective);
 /**
  * 1. this defines the api of our avatar directive. This means we are
  * expecting a user property whose value should be interpreted as an object.
