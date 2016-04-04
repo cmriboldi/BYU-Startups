@@ -2,9 +2,9 @@
  * 1. We have added a directive with the name 'nav' and handler of
  * avatarDirective to our angular app module
  */
-angular.module('app', [])
+angular.module('navApp', [])
   .controller('navCtrl', navCtrl)
-  .directive('nav-bar', navDirective);
+  .directive('nav-header', navDirective);
 /**
  * 1. this defines the api of our avatar directive. This means we are
  * expecting a user property whose value should be interpreted as an object.
@@ -16,6 +16,7 @@ angular.module('app', [])
  * we go ahead and give it a default
  */
 function navDirective () {
+  console.log("init Directive");
   return {
     scope: {
       loggedIn: '=' /* [1] */
