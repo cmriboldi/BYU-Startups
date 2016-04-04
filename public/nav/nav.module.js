@@ -21,7 +21,7 @@ function navDirective () {
   
   return {
     scope: {
-      text: "=text" /* [1] */
+      loggedIn: "=loggedIn" /* [1] */
     },
     
     restrict: 'E', /* [2] */
