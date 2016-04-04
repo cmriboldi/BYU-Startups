@@ -22,7 +22,7 @@ function navDirective () {
       loggedIn: '=' /* [1] */
     },
     restrict: 'E', /* [2] */
-    templateUrl: 'nav/nav.html'
+    templateUrl: '../nav/nav.html'
   };
 }
 
@@ -32,13 +32,13 @@ function navCtrl ($scope) {
   console.log("inside NavController");
   console.log("$scope.loggedIn is: " , $scope.loggedIn);
   // $scope.users = [];
-  // 
+  //
   // $scope.addNew = function (user) {
-  //   $scope.users.push({ 
+  //   $scope.users.push({
   //     name: user.name,
   //     avatarUrl: user.url
   //   }); /* [1] */
-  //   
+  //
   //   user.name = ''; /* [2] */
   //   user.url = ''; /* [2] */
   // };
