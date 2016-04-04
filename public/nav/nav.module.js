@@ -22,7 +22,7 @@ function navDirective () {
       loggedIn: '=' /* [1] */
     },
     restrict: 'E', /* [2] */
-    templateUrl: '../nav/nav.html'
+    templateUrl: 'nav/nav.html'
   };
 }
 
