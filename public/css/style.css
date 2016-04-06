@@ -19,41 +19,42 @@ div {
 }
 
 .hero {
+  padding-bottom: 10px;
 
-    .hero-wrapper {
-      position: relative;
-      top: 10px;
-      height: 550px;
+  .hero-wrapper {
+    position: relative;
+    top: 10px;
+    height: 550px;
 
-      .info {
-        position: absolute;
-        top: 100px;
-        width: 350px;
-        @media (max-width: 350px) {
-          width: 100%;
-          top: 20px;
-        }
-
-
-
-
-
-        .info-learn-more {
-          margin-top: 15px;
-          cursor: pointer;
-        }
+    .info {
+      position: absolute;
+      top: 100px;
+      width: 350px;
+      @media (max-width: 350px) {
+        width: 100%;
+        top: 20px;
       }
 
-      .hero-shot {
-        position: absolute;
-        left: 10%;
-        top: 0px;
-        width: 90%;
 
+
+
+
+      .info-learn-more {
+        margin-top: 15px;
+        cursor: pointer;
       }
     }
 
+    .hero-shot {
+      position: absolute;
+      left: 10%;
+      top: 0px;
+      width: 90%;
+
+    }
   }
+
+}
   .info-title {
     line-height: 120%;
     font-size: 40px;
@@ -68,7 +69,6 @@ div {
 
 
 .midsection {
-  padding-top: 10px;
   background-color: #F2F2F2;
   text-align: center;
   border-top: 1px solid #dddddd;
