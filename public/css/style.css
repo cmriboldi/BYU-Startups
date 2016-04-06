@@ -101,6 +101,12 @@ div {
   font-size: 30px;
   padding-bottom: 15px;
 }
+.contained-image {
+  height: auto;
+  width: auto;
+  max-height: 450px;
+  max-width: 450px;
+}
 
 .banner {
   background: #72A7D7;
