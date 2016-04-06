@@ -112,6 +112,13 @@ div {
   margin-top: 25px;
 }
 .footer-bottom {
-  background-color: #5293CD
+  background-color: #5293CD;
+  padding-top: 30px;
   height: 270px;
+  text-align: center;
+}
+.footer-copyright {
+  font-size: 14px;
+  text-align: center;
+  color: #F2F2F2;
 }
