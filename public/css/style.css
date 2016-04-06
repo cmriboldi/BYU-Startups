@@ -3,6 +3,7 @@ body {
   padding-top: 65px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
+  position: relative;
 }
 
 p {
@@ -88,10 +89,9 @@ div {
 }
 
 .banner {
-    background: #71A6D6;
-    color: white;
-    text-align: center;
-
+  background: #71A6D6;
+  color: white;
+  text-align: center;
 }
 .banner-wrapper {
   display: block;
@@ -108,6 +108,11 @@ div {
   color: black;
   font-size: 28px;
   font-weight: 300;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.footer-bottom {
+  background: #5293CD
+  text-align: center;
+  height: 270px;
 }
