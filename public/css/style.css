@@ -57,17 +57,18 @@ div {
   .info-title {
     line-height: 120%;
     font-size: 40px;
-    padding-right: 25px;
+    padding-left: 25px;
   }
   .info-subtitle {
     margin-top: 10px;
     line-height: 120%;
     font-size: 18px;
-    padding-right: 25px;
+    padding-left: 25px;
   }
 
 
 .midsection {
+  padding-top: 10px;
   background-color: #F2F2F2;
   text-align: center;
   border-top: 1px solid #dddddd;
