@@ -29,7 +29,7 @@ function loginDirective () {
 }
 
 
-function navCtrl ($scope) {
+function loginCtrl ($scope) {
 
   console.log("inside LoginController");
   console.log("$scope.loggedIn is: " , $scope.loggedIn);
