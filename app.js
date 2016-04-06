@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var flash = require('connect-flash');
 
 var app = express();
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash());
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/passport');
