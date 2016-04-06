@@ -24,7 +24,7 @@ function loginDirective () {
     },
     
     restrict: 'E', /* [2] */
-    templateUrl: 'login/login.html'
+    templateUrl: './login.html'
   };
 }
 
