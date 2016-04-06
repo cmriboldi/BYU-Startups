@@ -20,12 +20,13 @@ module.exports = function(passport) {
   /* Handle Login POST */
   router.post('/login', passport.authenticate('login', {
     successRedirect: '/profile',
-    failureRedirect: '/'
+    failureRedirect: '/login',
+    failureFlash: 'Invalid username or password'
   }));
 
   /* GET Login Page */
   router.get('/login', function(req, res) {
-    res.render('login');
+    res.render('login', { message: req.flash('error') });
   });
 
   /* GET Registration Page */
