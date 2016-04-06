@@ -104,8 +104,8 @@ div {
 .contained-image {
   height: auto;
   width: auto;
-  max-height: 450px;
-  max-width: 450px;
+  max-height: 200px;
+  max-width: 200px;
 }
 
 .banner {
