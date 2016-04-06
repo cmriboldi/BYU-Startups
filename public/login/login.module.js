@@ -33,6 +33,13 @@ function loginCtrl ($scope) {
 
   console.log("inside LoginController");
   console.log("$scope.loggedIn is: " , $scope.loggedIn);
+  
+  $scope.state = "Log in";
+  
+  $scope.login = function() {
+    console.log("The user is trying to login.");
+  }
+  
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {
