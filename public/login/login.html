@@ -3,7 +3,6 @@
     <p class="title">Log in</p><input type="text" name="username" placeholder="Username" required autofocus>
     <i class="fa fa-user"></i><input type="password" name="password" placeholder="Password" required>
     <i class="fa fa-key"></i> <a href="/signup">Create an account</a>
-    <button type="submit" ><i class="spinner"></i> <span class="state">Log in</span></button>
+    <button ng-click="login" type="submit" ><i class="spinner"></i><span class="state">{{state}}</span></button>
   </form>
-  <p></p>
 </div>
