@@ -74,11 +74,12 @@ div {
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
   width: 100%;
+  padding-bottom: 10px;
 
 }
 .midsection-title {
   display: block;
-  margin: 50px auto 10px auto;
+  margin: 30px auto 10px auto;
   font-size: 30px;
 }
 
