@@ -107,6 +107,9 @@ div {
   max-height: 200px;
   max-width: 200px;
 }
+.bottom-content {
+  padding-bottom: 20px;
+}
 
 .banner {
   background: #72A7D7;
