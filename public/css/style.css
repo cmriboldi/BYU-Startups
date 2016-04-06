@@ -14,8 +14,8 @@ div {
 }
 
 .nav-padding {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .hero {
@@ -57,11 +57,13 @@ div {
   .info-title {
     line-height: 120%;
     font-size: 40px;
+    padding-right: 25px;
   }
   .info-subtitle {
     margin-top: 10px;
     line-height: 120%;
     font-size: 18px;
+    padding-right: 25px;
   }
 
 
