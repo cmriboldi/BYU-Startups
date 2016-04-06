@@ -2,9 +2,9 @@
  * 1. We have added a directive with the name 'nav' and handler of
  * avatarDirective to our angular app module
  */
-angular.module('navApp', [])
-  .controller('navCtrl', navCtrl)
-  .directive('navHeader', navDirective);
+angular.module('loginApp', [])
+  .controller('loginCtrl', loginCtrl)
+  .directive('login', loginDirective);
 /**
  * 1. this defines the api of our avatar directive. This means we are
  * expecting a user property whose value should be interpreted as an object.
@@ -15,9 +15,8 @@ angular.module('navApp', [])
  * 4. Here we are implementing the feature where if there is no user avatar url,
  * we go ahead and give it a default
  */
-function navDirective () {
+function loginDirective () {
   console.log("init Directive");
-  
   
   return {
     scope: {
@@ -25,14 +24,14 @@ function navDirective () {
     },
     
     restrict: 'E', /* [2] */
-    templateUrl: 'nav/nav.html'
+    templateUrl: './login.html'
   };
 }
 
 
-function navCtrl ($scope) {
+function loginCtrl ($scope) {
 
-  console.log("inside NavController");
+  console.log("inside LoginController");
   console.log("$scope.loggedIn is: " , $scope.loggedIn);
   // $scope.users = [];
   //

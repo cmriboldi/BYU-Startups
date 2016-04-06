@@ -13,7 +13,7 @@ module.exports = function(passport) {
   router.get('/', function(req, res) {
     res.render('index', {
       title: 'BYU Startups',
-      loggedIn: req.isAuthenticated()
+      isLoggedIn: req.isAuthenticated()
     });
   });
 
