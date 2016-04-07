@@ -55,7 +55,7 @@ module.exports = function(passport) {
     res.redirect('/');
   });
 
-  router.get('/user', isLoggedin, function(req, res, next) {
+  router.get('/users', function(req, res, next) {
     User.find(function(err, users) {
       if(err) {return next(err);}
       res.json(users);
