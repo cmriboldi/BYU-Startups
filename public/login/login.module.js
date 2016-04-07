@@ -32,7 +32,7 @@ function loginDirective () {
 function loginCtrl ($scope) {
 
   console.log("inside LoginController");
-  console.log("$scope.loggedIn is: " , $scope.loggedIn);
+  console.log("$scope.loggedIn is: " , $scope.loggedin);
   console.log("$scope.state was: " , $scope.state);
   
   $scope.state = "Log in";
