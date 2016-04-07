@@ -5,12 +5,22 @@
 angular.module('loginApp', [])
   .directive('login', loginDirective)
   .controller('loginCtrl', ['$scope', '$http', function ($scope, $http) {
+    
+    $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+    
     $scope.state = "Log in";
+    $scope.username = "";
+    $scope.password = "";
     
     $scope.login = function() {
       console.log("The user is trying to login.");
+      console.log("$scope.username is: ", $scope.username);
+      console.log("$scope.password is: ", $scope.password);
       
-      $http.post('/login').success(function(data){
+      $http.post('/login', {
+          username: $scope.username,
+          password: $scope.password
+        }).success(function(data){
           console.log("successfully logged In");
           console.log("data is: ", data);
         }).error(function(err){

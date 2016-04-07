@@ -19,7 +19,8 @@ module.exports = function(passport) {
 
   /* Handle Login POST */
   router.post('/login', passport.authenticate('login', {
-    successRedirect: '/profile'
+    successRedirect: '/profile',
+    failureRedirect: '/login'
   }));
 
   /* GET Login Page */
