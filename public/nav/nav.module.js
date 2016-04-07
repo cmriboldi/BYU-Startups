@@ -17,13 +17,13 @@ angular.module('navApp', [])
  */
 function navDirective () {
   console.log("init Directive");
-  
-  
+
+
   return {
     scope: {
       loggedin: "=loggedin" /* [1] */
     },
-    
+
     restrict: 'E', /* [2] */
     templateUrl: 'nav/nav.html'
   };
@@ -33,7 +33,7 @@ function navDirective () {
 function navCtrl ($scope) {
 
   console.log("inside NavController");
-  console.log("$scope.loggedIn is: " , $scope.loggedIn);
+  console.log("$scope.loggedIn is: " , $scope.loggedin);
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {

@@ -1,11 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
+var User = mongoose.model('User');
 
 var isLoggedin = function(req, res, next) {
   if (req.isAuthenticated())
     return next();
   res.render('login');
 }
+
 
 module.exports = function(passport) {
 
@@ -48,9 +51,16 @@ module.exports = function(passport) {
   }));
 
   /* Handle Logout */
-  router.get('/signout', function(req, res) {
+  router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
+  });
+
+  router.get('/user', isLoggedin, function(req, res, next) {
+    User.find(function(err, users) {
+      if(err) {return next(err);}
+      res.json(users);
+    });
   });
 
   return router;
