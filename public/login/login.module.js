@@ -30,17 +30,14 @@ function loginDirective () {
 
 
 function loginCtrl ($scope) {
-
-  console.log("inside LoginController");
-  console.log("$scope.loggedIn is: " , $scope.loggedin);
-  console.log("$scope.state was: " , $scope.state);
-  
   $scope.state = "Log in";
-  
-  console.log("$scope.state is: " , $scope.state);
   
   $scope.login = function() {
     console.log("The user is trying to login.");
+    
+    return $http.post('/login').success(function(data){
+        console.log("successfully logged In");
+      });
   }
   
   // $scope.users = [];
