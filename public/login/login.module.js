@@ -12,6 +12,7 @@ angular.module('loginApp', [])
       
       return $http.post('/login').success(function(data){
           console.log("successfully logged In");
+          console.log("data is: ", data);
         });
     }
     
