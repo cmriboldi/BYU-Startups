@@ -3,8 +3,31 @@
  * avatarDirective to our angular app module
  */
 angular.module('loginApp', [])
-  .controller('loginCtrl', loginCtrl)
-  .directive('login', loginDirective);
+  .directive('login', loginDirective)
+  .controller('loginCtrl', ['$scope', '$http', function ($scope, $http) {
+    $scope.state = "Log in";
+    
+    $scope.login = function() {
+      console.log("The user is trying to login.");
+      
+      return $http.post('/login').success(function(data){
+          console.log("successfully logged In");
+        });
+    }
+    
+    // $scope.users = [];
+    //
+    // $scope.addNew = function (user) {
+    //   $scope.users.push({
+    //     name: user.name,
+    //     avatarUrl: user.url
+    //   }); /* [1] */
+    //
+    //   user.name = ''; /* [2] */
+    //   user.url = ''; /* [2] */
+    // };
+  }]);
+  
 /**
  * 1. this defines the api of our avatar directive. This means we are
  * expecting a user property whose value should be interpreted as an object.
@@ -26,29 +49,4 @@ function loginDirective () {
     restrict: 'E', /* [2] */
     templateUrl: './login.html'
   };
-}
-
-
-function loginCtrl ($scope) {
-  $scope.state = "Log in";
-  
-  $scope.login = function() {
-    console.log("The user is trying to login.");
-    
-    return $http.post('/login').success(function(data){
-        console.log("successfully logged In");
-      });
-  }
-  
-  // $scope.users = [];
-  //
-  // $scope.addNew = function (user) {
-  //   $scope.users.push({
-  //     name: user.name,
-  //     avatarUrl: user.url
-  //   }); /* [1] */
-  //
-  //   user.name = ''; /* [2] */
-  //   user.url = ''; /* [2] */
-  // };
 }
