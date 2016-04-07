@@ -10,9 +10,11 @@ angular.module('loginApp', [])
     $scope.login = function() {
       console.log("The user is trying to login.");
       
-      return $http.post('/login').success(function(data){
+      $http.post('/login').success(function(data){
           console.log("successfully logged In");
           console.log("data is: ", data);
+        }).error(function(err){
+          console.log("error is: ", err);
         });
     }
     
