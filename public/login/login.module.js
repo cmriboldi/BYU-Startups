@@ -4,7 +4,7 @@
  */
 angular.module('loginApp', [])
   .directive('login', loginDirective)
-  .controller('loginCtrl', ['$scope', '$http', function ($scope, $http) {
+  .controller('loginCtrl', ['$scope', '$http', '$httpParamSerializer', function ($scope, $http, $httpParamSerializer) {
     
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     
