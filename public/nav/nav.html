@@ -10,37 +10,40 @@
         <a class="navbar-brand nav-padding">BYU Startups</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right nav-padding">
           <div ng-show="loggedin">
-            <li>
-              <a href="/profile">
-                <span class="glyphicon glyphicon-user"></span>
-                {{user.avatar}} {{user.name}}
-              </a>
-            </li>
-            <li>
-              <a href="/logout">
-                <span class="glyphicon glyphicon-log-in"></span>
-                Logout
-              </a>
-            </li>
+            <ul class="nav navbar-nav navbar-right nav-padding">
+              <li>
+                <a href="/profile">
+                  <span class="glyphicon glyphicon-user"></span>
+                  {{user.avatar}} {{user.name}}
+                </a>
+              </li>
+              <li>
+                <a href="/logout">
+                  <span class="glyphicon glyphicon-log-in"></span>
+                  Logout
+                </a>
+              </li>
+              <li> logged in is {{loggedin}} </li>
+            </ul>
           </div>
-          <div ng-show="!loggedin" class="ng-hide">
-            <li>
-              <a href="/signup">
-                <span class="glyphicon glyphicon-user"></span>
-                Sign Up
-              </a>
-            </li>
-            <li>
-              <a href="/login">
-                <span class="glyphicon glyphicon-log-in"></span>
-                Login
-              </a>
-            </li>
+          <div ng-show="!loggedin">
+            <ul class="nav navbar-nav navbar-right nav-padding">
+              <li>
+                <a href="/signup">
+                  <span class="glyphicon glyphicon-user"></span>
+                  Sign Up
+                </a>
+              </li>
+              <li>
+                <a href="/login">
+                  <span class="glyphicon glyphicon-log-in"></span>
+                  Login
+                </a>
+              </li>
+              <li> logged in is {{loggedin}} </li>
+            </ul>
           </div>
-          <li> logged in is {{loggedin}} </li>
-        </ul>
       </div>
     </div>
   </nav>
