@@ -21,9 +21,7 @@ function navDirective () {
 
   return {
     scope: {
-      navdata: "="
-      // loggedin: "=navdata.isLoggedIn",
-      // fullname: "=navdata.fullName" /* [1] */
+      loggedin: "=loggedin",
     },
 
     restrict: 'E', /* [2] */
@@ -33,9 +31,8 @@ function navDirective () {
 
 
 function navCtrl ($scope) {
-  $scope.loggedin = $scope.navdata.isLoggedIn;
   console.log("inside NavController");
-  console.log("$scope.loggedIn is: " , $scope.navdata.isLoggedIn);
+  console.log("$scope.loggedIn is: " , $scope.loggedin);
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {
