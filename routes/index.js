@@ -31,15 +31,15 @@ module.exports = function(passport) {
 
   router.route('/login')
      .get(users.renderSignin)
-     .post(passport.authenticate('local', {
-       successRedirect: '/',
-       failureRedirect: '/signin',
+     .post(passport.authenticate('login', {
+       successRedirect: '/profile',
+       failureRedirect: '/login',
        failureFlash: true
      }));
 
   /* GET Login Page */
   // router.get('/login', function(req, res) {
-  //   res.render('login', { message: "" });
+  //   res.render('login');
   // });
 
   /* GET Registration Page */
