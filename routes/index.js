@@ -25,7 +25,7 @@ module.exports = function(passport) {
   //   successRedirect: '/profile',
   //   failureRedirect: '/login'
   // }));
-  
+
   router.post('/login', function(req, res, next) {
     passport.authenticate('local', function(err, user, info) {
       if (err) { return next(err); }
@@ -65,7 +65,7 @@ module.exports = function(passport) {
   });
 
   router.get('/users', function(req, res, next) {
-    console.log(req.body.user);
+    console.log(req.body);
     User.find(function(err, users) {
       if(err) {return next(err);}
       res.json(users);
