@@ -15,9 +15,13 @@ module.exports = function(passport) {
 
   /* GET login page. */
   router.get('/', function(req, res) {
+    if(req.isAuthenticated()) {
+        console.log("req.user.fullName is: " + req.user.firstName + " " + req.user.lastName);
+    }
     res.render('index', {
       title: 'BYU Startups',
-      isLoggedIn: req.isAuthenticated()
+      isLoggedIn: req.isAuthenticated(),
+      fullName: req.user ? req.user.firstName + " " + req.user.lastName : ''
     });
   });
 
