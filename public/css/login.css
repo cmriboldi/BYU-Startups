@@ -78,6 +78,12 @@ body {
   color: #ccc;
 }
 
+.login input:focus {
+  outline: none;
+  color: #444;
+  border-color: #2196F3;
+}
+
 .login a {
   font-size: 0.8em;
   color: #2196F3;
