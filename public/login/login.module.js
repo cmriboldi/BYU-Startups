@@ -56,7 +56,7 @@ function loginDirective () {
   
   return {
     scope: {
-      loggedin: "=loggedin" /* [1] */
+      message: "=message" /* [1] */
     },
     
     restrict: 'E', /* [2] */
