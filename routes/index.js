@@ -28,7 +28,7 @@ module.exports = function(passport) {
   //   failureRedirect: '/login',
   //   failureFlash: true
   // }));
-  
+
   router.route('/login')
      .get(users.renderSignin)
      .post(passport.authenticate('local', {
@@ -46,7 +46,7 @@ module.exports = function(passport) {
   router.route('/signup')
      .get(users.renderSignup)
      .post(users.signup);
-  
+
   // router.get('/signup', function(req, res) {
   //   res.render('signup');
   // });
@@ -69,11 +69,11 @@ module.exports = function(passport) {
   //   req.logout();
   //   res.redirect('/');
   // });
-  
+
   router.get('/logout', users.signout);
 
   router.get('/users', function(req, res, next) {
-    console.log(req.session.user.name);
+    console.log(req.session.user.username);
     User.find(function(err, users) {
       if(err) {return next(err);}
       res.json(users);
@@ -82,4 +82,3 @@ module.exports = function(passport) {
 
   return router;
 }
-
