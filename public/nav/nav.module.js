@@ -33,7 +33,7 @@ function navDirective () {
 function navCtrl ($scope) {
 
   console.log("inside NavController");
-  console.log("$scope.loggedIn is: " , $scope.loggedin);
+  console.log("$scope.loggedIn is: " , loggedin);
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {
