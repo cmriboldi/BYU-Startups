@@ -73,7 +73,7 @@ module.exports = function(passport) {
   router.get('/logout', users.signout);
 
   router.get('/users', function(req, res, next) {
-    console.log(req.user._username);
+    console.log(req.user.username);
     User.find(function(err, users) {
       if(err) {return next(err);}
       res.json(users);
