@@ -31,7 +31,7 @@ module.exports = function(passport) {
   
   router.route('/login')
      .get(users.renderSignin)
-     .post(passport.authenticate('local', {
+     .post(passport.authenticate('login', {
        successRedirect: '/profile',
        failureRedirect: '/login',
        failureFlash: true
