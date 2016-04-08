@@ -29,7 +29,7 @@ module.exports = function(passport) {
   //   failureFlash: true
   // }));
   
-  app.route('/login')
+  router.route('/login')
      .get(users.renderSignin)
      .post(passport.authenticate('local', {
        successRedirect: '/',
@@ -43,7 +43,7 @@ module.exports = function(passport) {
   // });
 
   /* GET Registration Page */
-  app.route('/signup')
+  router.route('/signup')
      .get(users.renderSignup)
      .post(users.signup);
   
@@ -70,7 +70,7 @@ module.exports = function(passport) {
   //   res.redirect('/');
   // });
   
-  app.get('/logout', users.signout);
+  router.get('/logout', users.signout);
 
   router.get('/users', function(req, res, next) {
     console.log(req.body);
