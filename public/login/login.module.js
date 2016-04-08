@@ -4,7 +4,7 @@
  */
 angular.module('loginApp', [])
   .directive('login', loginDirective)
-  .controller('loginCtrl', ['$scope', '$http', function ($scope, $http) {
+  .controller('loginCtrl', ['$scope', '$http', '$httpParamSerializer', function ($scope, $http, $httpParamSerializer) {
     
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     
@@ -17,10 +17,10 @@ angular.module('loginApp', [])
       console.log("$scope.username is: ", $scope.username);
       console.log("$scope.password is: ", $scope.password);
       
-      $http.post('/login', {
+      $http.post('/login', $httpParamSerializer({
           username: $scope.username,
           password: $scope.password
-        }).success(function(data){
+        })).success(function(data){
           console.log("successfully logged In");
           console.log("data is: ", data);
         }).error(function(err){
