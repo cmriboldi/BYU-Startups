@@ -21,7 +21,7 @@ function navDirective () {
 
   return {
     scope: {
-      navdata: "=navdata"
+      navdata: "="
       // loggedin: "=navdata.isLoggedIn",
       // fullname: "=navdata.fullName" /* [1] */
     },
