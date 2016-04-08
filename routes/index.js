@@ -38,9 +38,9 @@ module.exports = function(passport) {
      }));
 
   /* GET Login Page */
-  router.get('/login', function(req, res) {
-    res.render('login');
-  });
+  // router.get('/login', function(req, res) {
+  //   res.render('login');
+  // });
 
   /* GET Registration Page */
   router.route('/signup')
