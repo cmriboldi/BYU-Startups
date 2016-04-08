@@ -77,26 +77,7 @@ body {
   border-radius: 2px;
   color: #ccc;
 }
-.login input + i.fa {
-  color: #fff;
-  font-size: 1em;
-  position: absolute;
-  margin-top: -47px;
-  opacity: 0;
-  left: 0;
-  transition: all 0.1s ease-in;
-}
-.login input:focus {
-  outline: none;
-  color: #444;
-  border-color: #2196F3;
-  border-left-width: 35px;
-}
-.login input:focus + i.fa {
-  opacity: 1;
-  left: 30px;
-  transition: all 0.25s ease-out;
-}
+
 .login a {
   font-size: 0.8em;
   color: #2196F3;
