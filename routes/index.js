@@ -20,7 +20,7 @@ module.exports = function(passport) {
     }
     res.render('index', {
       title: 'BYU Startups',
-      navData = {
+      navData : {
         isLoggedIn: req.isAuthenticated(),
         fullName: req.user ? req.user.firstName + " " + req.user.lastName : ''
       }
