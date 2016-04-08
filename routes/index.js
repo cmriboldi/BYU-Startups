@@ -14,7 +14,7 @@ module.exports = function(passport) {
 
   /* GET login page. */
   router.get('/', function(req, res) {
-    console.log("current username is ", req.body.username);
+    console.log("current username is ", req.body.user.username);
     res.render('index', {
       title: 'BYU Startups',
       isLoggedIn: req.isAuthenticated()
