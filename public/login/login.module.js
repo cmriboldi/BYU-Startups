@@ -11,6 +11,7 @@ angular.module('loginApp', [])
     $scope.state = "Log in";
     $scope.username = "";
     $scope.password = "";
+    $scope.message = "";
     
     $scope.login = function() {
       console.log("The user is trying to login.");
