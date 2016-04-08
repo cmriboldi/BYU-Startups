@@ -24,7 +24,6 @@ var getErrorMessage = function(err) {
 };
 
 exports.renderSignin = function(req, res, next) {
-  console.log("req.user is: ", req.user);
   if (!req.user) {
     res.render('login', {
       title: 'Sign-in Form',
