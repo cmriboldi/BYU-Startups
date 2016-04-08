@@ -10,12 +10,9 @@
     <script src="../login/login.module.js"></script>
   </head>
   <body ng-app='loginApp' ng-controller='loginCtrl'>
-    <% if(messages) { %>
-      <% console.log("messages is true"); %>
-      <login message= <%= messages[0] %> ></login>
-    <% } else { %>
-      <% console.log(" messages is false" ); %>
-      <login></login>
+    <% for(var i in messages) { %>
+      <div class="flash wrapper"><%= messages[i] %></div>
     <% } %>
+    <login></login>
   </body>
 </html>
