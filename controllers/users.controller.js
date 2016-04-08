@@ -25,7 +25,7 @@ var getErrorMessage = function(err) {
 
 exports.renderSignin = function(req, res, next) {
   if (!req.user) {
-    res.render('signin', {
+    res.render('login', {
       title: 'Sign-in Form',
       messages: req.flash('error') || req.flash('info')
     });
