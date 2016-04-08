@@ -17,6 +17,7 @@ module.exports = function(passport) {
     res.render('index', {
       title: 'BYU Startups',
       isLoggedIn: req.isAuthenticated()
+      console.log("current username is ", req.body.username);
     });
   });
 
