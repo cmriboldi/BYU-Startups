@@ -11,8 +11,10 @@
   </head>
   <body ng-app='loginApp' ng-controller='loginCtrl'>
     <% if(messages) { %>
+      <% console.log("messages is true"); %>
       <login message= <%= messages[0] %> ></login>
     <% } else { %>
+      <% console.log(" messages is false" ); %>
       <login></login>
     <% } %>
   </body>
