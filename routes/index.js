@@ -21,14 +21,23 @@ module.exports = function(passport) {
   });
 
   /* Handle Login POST */
-  router.post('/login', passport.authenticate('login', {
-    successRedirect: '/profile',
-    failureRedirect: '/login'
-  }));
+  // router.post('/login', passport.authenticate('login', {
+  //   successRedirect: '/profile',
+  //   failureRedirect: '/login'
+  // }));
+  
+  app.post('/login', function(req, res, next) {
+    passport.authenticate('local', function(err, user, info) {
+      if (err) { return next(err); }
+      if (!user) { return res.render('login', { message: "Invalid username or password." }); }
+      return res.redirect('/profile');
+    })(req, res, next);
+  });
+
 
   /* GET Login Page */
   router.get('/login', function(req, res) {
-    res.render('login');
+    res.render('login', { message: "" });
   });
 
   /* GET Registration Page */
