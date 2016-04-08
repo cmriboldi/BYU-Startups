@@ -58,7 +58,7 @@ module.exports = function(passport) {
   });
 
   router.get('/users', function(req, res, next) {
-    console.log(req.body);
+    console.log(req.session.user.name);
     User.find(function(err, users) {
       if(err) {return next(err);}
       res.json(users);
