@@ -14,10 +14,10 @@ module.exports = function(passport) {
 
   /* GET login page. */
   router.get('/', function(req, res) {
+    console.log("current username is ", req.body.username);
     res.render('index', {
       title: 'BYU Startups',
       isLoggedIn: req.isAuthenticated()
-      console.log("current username is ", req.body.username);
     });
   });
 
