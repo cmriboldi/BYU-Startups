@@ -9,11 +9,12 @@
     <script src="../js/prefixfree.min.js"></script>
     <script src="../signup/signup.module.js"></script>
   </head>
-  <body>
-    <h1>Registration Details<div>
-    <% for(var i in messages) { %>
-      <div class="flash"><%= messages[i] %></div>
-    <% } %>
-    <signup></signup>
+  <body ng-app='signupApp' ng-controller='signupCtrl'>
+    <div class="wrapper">
+      <% for(var i in messages) { %>
+        <div class="flash"><%= messages[i] %></div>
+      <% } %>
+      <signup></signup>
+    </div>
   </body>
 </html>
