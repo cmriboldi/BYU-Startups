@@ -1,0 +1,12 @@
+<div ng-controller="loginCtrl">
+  
+  <form action="/signup" method="POST" >
+    <p class="title">Sign up</p><input type="text" name="username" placeholder="Username" required autofocus >
+    <input type="password" name="password" placeholder="Password" required >
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="firstName" placeholder="First Name" required>
+    <input type="text" name="lastName" placeholder="Last Name" required>
+    <a href="/signup">Have an account? Login</a>
+    <button type="submit" ><span class="state">Register</span></button>
+  </form>
+</div>
