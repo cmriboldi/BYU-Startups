@@ -7,7 +7,7 @@ var users = require('../controllers/users.controller')
 var isLoggedin = function(req, res, next) {
   if (req.isAuthenticated())
     return next();
-  res.render('login');
+  res.render('login', { messages: [] });
 }
 
 
