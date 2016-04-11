@@ -11,7 +11,8 @@
     <meta charset="utf-8">
     <title><%= title %></title>
   </head>
-  <body>
+  <body ng-app='navApp' ng-controller='navCtrl'>
+    <nav-header></nav-header>
     <!--
       1. ng-app='app' tells angular that everything within this div should function within
       the scope of a declared angular module with the name of app.
@@ -19,6 +20,7 @@
       by a controller by the name of 'mainCtrl'. In a bigger application you will likely have
       multiple controllers within one ng-app
     -->
+    <p> user is {{user.username}}</p>
     <div > <!-- [1],[2] -->
       If you want to logout, go <a href="/logout">here</a>.
       Click <a href="/">here</a> for our info/home page.

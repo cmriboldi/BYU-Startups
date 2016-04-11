@@ -59,7 +59,8 @@ module.exports = function(passport) {
   /* GET Profile Page */
   router.get('/profile', isLoggedin, function(req, res) {
     res.render('profile', {
-      title: 'BYU Profile'
+      title: 'BYU Profile',
+      user: req.user
     });
   });
 
