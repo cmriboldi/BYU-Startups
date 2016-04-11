@@ -32,7 +32,10 @@ function navDirective () {
 
 function navCtrl ($scope,$http) {
   console.log("inside NavController");
-  //console.log("$scope.loggedIn is: " , $scope.loggedin.lastName);
+  if($scope.loggedin) {
+    console.log("$scope.loggedIn is: " , $scope.loggedin);
+  }
+
 
   $scope.currentUser = {};
   console.log("user is1: ", $scope.currentUser);
