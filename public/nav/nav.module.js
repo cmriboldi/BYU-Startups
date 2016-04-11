@@ -38,6 +38,7 @@ function navCtrl ($scope,$http) {
   console.log("user is: ", $scope.currentUser);
 
   $scope.getUser = function() {
+    console.log("called get user ----------");
     return $http.get('/currentUser').success(function(user) {
       angular.copy(user, $scope.currentUser);
     });
