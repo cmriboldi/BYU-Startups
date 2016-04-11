@@ -53,7 +53,7 @@ function navCtrl ($scope,$http) {
   console.log("user is3: ", $scope.currentUser);
   
   $scope.hasFullName = function() {
-    return $scope.fullname != '';
+    return $scope.fullname !== '';
   }
   // $scope.users = [];
   //
