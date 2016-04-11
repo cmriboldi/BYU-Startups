@@ -15,12 +15,13 @@ module.exports = function(passport) {
 
   /* GET login page. */
   router.get('/', function(req, res) {
+    var tempName;
     if(req.isAuthenticated()) {
-        console.log("req.user.fullName is: " + req.user.firstName + " " + req.user.lastName);
+        tempName = req.user.firstName + " " + req.user.lastName;
     }
     res.render('index', {
       title: 'BYU Startups',
-      isLoggedIn: req.user ? req.user.firstName + " " + req.user.lastName : '',
+      isLoggedIn: tempName,
     });
   });
 
