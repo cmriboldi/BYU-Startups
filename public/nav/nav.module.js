@@ -39,7 +39,7 @@ function navCtrl ($scope,$http) {
 
   $scope.getUser = function() {
     console.log("called get user ----------");
-    return $http.get('/currentUser');
+    return $http.get('/currentUser').data;
   }
   $scope.currentUser = $scope.getUser();
   console.log("user is3: ", $scope.currentUser);
