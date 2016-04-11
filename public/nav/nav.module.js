@@ -22,7 +22,6 @@ function navDirective () {
   return {
     scope: {
       loggedin: "=loggedin",
-      fullname: "=fullname",
     },
 
     restrict: 'E', /* [2] */
