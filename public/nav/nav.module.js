@@ -34,14 +34,14 @@ function navCtrl ($scope,$http) {
   console.log("inside NavController");
   console.log("$scope.loggedIn is: " , $scope.loggedin);
 
-  $scope.currentUser = null;
+  $scope.currentUser = {};
   console.log("user is1: ", $scope.currentUser);
 
   $scope.getUser = function() {
     console.log("called get user ----------");
     return $http.get('/currentUser').success(function(user) {
       console.log("user is2: ", user);
-      $scope.currentUser = user;
+      angular.copy(user, $scope.currentUser);
     });
   }
   $scope.getUser();
