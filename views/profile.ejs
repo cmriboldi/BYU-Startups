@@ -20,18 +20,24 @@
       by a controller by the name of 'mainCtrl'. In a bigger application you will likely have
       multiple controllers within one ng-app
     -->
-    <div class="col-md-offset-2 col-md-3">
-      <img class="contained-image" src="/img/avatar-original.png" alt="avatar">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-3">
+        <img class="contained-image" src="/img/avatar-original.png" alt="avatar">
+      </div>
+      <div class="col-md-4">
+        <h1><%=user.firstName%> <%=user.lastName%></h1>
+        <p>Hello <%=user.firstName%>, this is your profile page. Here you can look to find new matches, edit your profile info, skills, and interests</p>
+      </div>
     </div>
-    <div class="col-md-4">
-      <h1><%=user.firstName%> <%=user.lastName%></h1>
-      <p>Hello <%=user.firstName%>, this is your profile page. Here you can look to find new matches, edit your profile info, skills, and interests</p>
+    <div class="row">
+
+      <p> user is <%=user.username%></p>
+      <div > <!-- [1],[2] -->
+        If you want to logout, go <a href="/logout">here</a>.
+        Click <a href="/">here</a> for our info/home page.
+        <h1>Add a new user and photo</h1>
+      </div>
     </div>
-    <p> user is <%=user.username%></p>
-    <div > <!-- [1],[2] -->
-      If you want to logout, go <a href="/logout">here</a>.
-      Click <a href="/">here</a> for our info/home page.
-      <h1>Add a new user and photo</h1>
 
       <!--
        1. Giving a form a name in Angular is kind of like creationg a javascript object with that name:
