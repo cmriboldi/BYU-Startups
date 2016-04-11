@@ -36,6 +36,7 @@ function navCtrl ($scope,$http) {
     console.log("$scope.loggedIn is: " , $scope.loggedin);
   }
 
+  console.log("fullname is ", $scope.fullname);
 
   $scope.currentUser;
   console.log("user is1: ", $scope.currentUser);
