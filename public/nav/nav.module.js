@@ -21,7 +21,7 @@ function navDirective () {
 
   return {
     scope: {
-      fullname: "=fullname" || '',
+      fullname: "=fullname",
     },
 
     restrict: 'E', /* [2] */
