@@ -42,11 +42,9 @@ function navCtrl ($scope,$http) {
     return $http.get('/currentUser').success(function(user) {
       angular.copy(user, $scope.currentUser);
     });
-
-    $scope.getUser();
-    console.log("user is: ", $scope.currentUser.firstName);
   }
-
+  $scope.getUser();
+  console.log("user is: ", $scope.currentUser.firstName);
 
   // $scope.users = [];
   //
