@@ -51,6 +51,10 @@ function navCtrl ($scope,$http) {
   };
   $scope.getUser();
   console.log("user is3: ", $scope.currentUser);
+  
+  $scope.hasFullName = function() {
+    return $scope.fullname != '';
+  }
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {

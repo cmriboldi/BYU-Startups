@@ -10,7 +10,7 @@
         <a class="navbar-brand nav-padding">BYU Startups</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
-          <div ng-show="fullname != ''">
+          <div ng-show="hasFullName()">
             <ul class="nav navbar-nav navbar-right nav-padding">
               <li>
                 <a href="/profile">
@@ -24,10 +24,10 @@
                   Logout
                 </a>
               </li>
-              <li> logged in is {{fullname != ''}} </li>
+              <li> logged in is {{hasFullName()}} </li>
             </ul>
           </div>
-          <div ng-show="fullname == ''">
+          <div ng-show="hasFullName()">
             <ul class="nav navbar-nav navbar-right nav-padding">
               <li>
                 <a href="/signup">
@@ -41,7 +41,7 @@
                   Login
                 </a>
               </li>
-              <li> logged in is {{fullname != ''}} </li>
+              <li> logged in is {{hasFullName()}} </li>
             </ul>
           </div>
       </div>
