@@ -58,6 +58,7 @@ module.exports = function(passport) {
 
   /* GET Profile Page */
   router.get('/profile', isLoggedin, function(req, res) {
+    console.log("profile user is",req.user);
     res.render('profile', {
       title: 'BYU Profile',
       user: req.user
