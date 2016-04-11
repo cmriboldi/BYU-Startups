@@ -34,19 +34,20 @@
       <div class="col-md-offset-4 col-md-4"> <!-- [1],[2] -->
         If you want to logout, go <a href="/logout">here</a>.
         Click <a href="/">here</a> for our info/home page.
-        <h1>Add a new user and photo</h1>
-      </div>
-      <form name='userForm' ng-submit='addNew(userForm)'> <!-- [1], [2] -->
+        <h2>Add a new user and photo</h2>
+        <form name='userForm' ng-submit='addNew(userForm)'> <!-- [1], [2] -->
 
-        <input placeholder='Name' ng-model='userForm.name'/> <!-- [3] -->
-        <input placeholder='Image Url' ng-model='userForm.url'/>
-        <button type='submit'>Add New</button>
-      </form>
-      <ul class='User-list'>
-        <li ng-repeat='user in users'>
-          <avatar user='user' />
-        </li>
-      </ul>
+          <input placeholder='Name' ng-model='userForm.name'/> <!-- [3] -->
+          <input placeholder='Image Url' ng-model='userForm.url'/>
+          <button type='submit'>Add New</button>
+        </form>
+        <ul class='User-list'>
+          <li ng-repeat='user in users'>
+            <avatar user='user' />
+          </li>
+        </ul>
+      </div>
+
     </div>
 
 
