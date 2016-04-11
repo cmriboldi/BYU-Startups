@@ -15,14 +15,14 @@ module.exports = function(passport) {
 
   /* GET login page. */
   router.get('/', function(req, res) {
-    var tempName;
-    if(req.isAuthenticated()) {
+    var tempName = '';
+    if(req.user) {
         tempName = req.user.firstName + " " + req.user.lastName;
-        console.log(tempName);
+        console.log("temp name is: " , tempName);
     }
     res.render('index', {
       title: 'BYU Startups',
-      fullName: req.user ? req.user.firstName + " " + req.user.lastName : ''
+      fullName: tempName
     });
   });
 
