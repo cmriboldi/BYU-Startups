@@ -39,11 +39,11 @@ function navCtrl ($scope,$http) {
 
   $scope.getUser = function() {
     console.log("called get user ----------");
-    return $http.get('/currentUser').then(function(response) {
-      console.log("user is2: ", response.data);
-      angular.copy(response.data, $scope.currentUser);
+    return $http.get('/currentUser').then(function(data) {
+      console.log("user is2: ", data);
+      angular.copy(data, $scope.currentUser);
     });
-  }
+  };
   $scope.getUser();
   console.log("user is3: ", $scope.currentUser);
   // $scope.users = [];
