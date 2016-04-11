@@ -20,8 +20,11 @@
       by a controller by the name of 'mainCtrl'. In a bigger application you will likely have
       multiple controllers within one ng-app
     -->
-    <div class="col-md-offset-2 col-md-4">
+    <div class="col-md-offset-2 col-md-3">
       <img class="contained-image" src="/img/avatar-original.png" alt="avatar">
+    </div>
+    <div class="col-md-4">
+      <h1><%=user.firstName%> <%=user.lastName%></h1>
     </div>
     <p> user is <%=user.username%></p>
     <div > <!-- [1],[2] -->
