@@ -85,5 +85,10 @@ module.exports = function(passport) {
     });
   });
 
+  router.get('/currentUser', function(req, res, next) {
+    console.log("currentUser is: ", req.user.username);
+    res.send(req.user);
+  });
+
   return router;
 }
