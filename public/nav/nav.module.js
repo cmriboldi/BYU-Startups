@@ -41,12 +41,12 @@ function navCtrl ($scope,$http) {
     console.log("called get user ----------");
     return $http.get('/currentUser').then(function(response) {
       console.log(response.data);
-      $scope.currentUser = response.data;
+      angular.copy(response.data,$scope.currentUser);
       return response.data;
     });
   }
   $scope.getUser();
-  console.log("user is3: ", $scope.currentUser.username);
+  console.log("user is3: ", $scope.currentUser);
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {
