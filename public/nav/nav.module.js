@@ -35,17 +35,17 @@ function navCtrl ($scope,$http) {
   console.log("$scope.loggedIn is: " , $scope.loggedin);
 
   $scope.currentUser = null;
-  console.log("user is: ", $scope.currentUser);
+  console.log("user is1: ", $scope.currentUser);
 
   $scope.getUser = function() {
     console.log("called get user ----------");
     return $http.get('/currentUser').success(function(user) {
-      console.log("user is: ", user);
+      console.log("user is2: ", user);
       $scope.currentUser = user;
     });
   }
   $scope.getUser();
-  console.log("user is: ", $scope.currentUser);
+  console.log("user is3: ", $scope.currentUser);
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {
