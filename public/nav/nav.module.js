@@ -44,7 +44,7 @@ function navCtrl ($scope,$http) {
     });
   }
   $scope.getUser();
-
+  console.log("user is: ", $scope.currentUser);
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {
