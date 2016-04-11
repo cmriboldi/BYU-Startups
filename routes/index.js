@@ -22,7 +22,7 @@ module.exports = function(passport) {
     }
     res.render('index', {
       title: 'BYU Startups',
-      isLoggedIn: req.user,
+      isLoggedIn: req.isAuthenticated(),
     });
   });
 
