@@ -86,7 +86,7 @@ module.exports = function(passport) {
   });
 
   router.get('/currentUser', function(req, res, next) {
-    console.log("currentUser is: ", req.user.username);
+    console.log("currentUser is: ", req.user);
     res.json(req.user);
   });
 
