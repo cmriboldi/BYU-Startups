@@ -18,6 +18,7 @@ module.exports = function(passport) {
     var tempName;
     if(req.isAuthenticated()) {
         tempName = req.user.firstName + " " + req.user.lastName;
+        console.log(tempName);
     }
     res.render('index', {
       title: 'BYU Startups',
