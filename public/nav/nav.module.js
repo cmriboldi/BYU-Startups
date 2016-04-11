@@ -40,6 +40,7 @@ function navCtrl ($scope,$http) {
   $scope.getUser = function() {
     console.log("called get user ----------");
     return $http.get('/currentUser').then(function(response) {
+      console.log(response.data);
       return response.data;
     });
   }
