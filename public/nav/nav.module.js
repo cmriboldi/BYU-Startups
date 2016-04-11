@@ -35,12 +35,13 @@ function navCtrl ($scope,$http) {
   console.log("$scope.loggedIn is: " , $scope.loggedin);
 
   $scope.currentUser;
+  console.log("user is: ", $scope.currentUser.firstName);
 
   $scope.getUser = function() {
     return $http.get('/currentUser').success(function(user) {
       angular.copy(user, $scope.currentUser);
     });
-    
+
     $scope.getUser();
     console.log("user is: ", $scope.currentUser.firstName);
   }
