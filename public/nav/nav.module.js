@@ -34,8 +34,8 @@ function navCtrl ($scope,$http) {
   console.log("inside NavController");
   console.log("$scope.loggedIn is: " , $scope.loggedin);
 
-  $scope.currentUser;
-  console.log("user is: ", $scope.currentUser.firstName);
+  $scope.currentUser = null;
+  console.log("user is: ", $scope.currentUser);
 
   $scope.getUser = function() {
     return $http.get('/currentUser').success(function(user) {
