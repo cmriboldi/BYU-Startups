@@ -3,6 +3,7 @@
 <html ng-app='app' ng-controller='mainCtrl'>
   <head>
     <!-- include our dependency on angular -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
   <script src="avatar/avatar.module.js"></script>
   <link rel="stylesheet" href="css/profile.css">
@@ -12,7 +13,6 @@
     <title><%= title %></title>
   </head>
   <body>
-    <nav-header></nav-header>
     <!--
       1. ng-app='app' tells angular that everything within this div should function within
       the scope of a declared angular module with the name of app.
@@ -20,6 +20,9 @@
       by a controller by the name of 'mainCtrl'. In a bigger application you will likely have
       multiple controllers within one ng-app
     -->
+    <div class="col-md-4">
+      <img src="/img/avatar-original.png" alt="avatar">
+    </div>
     <p> user is <%=user.username%></p>
     <div > <!-- [1],[2] -->
       If you want to logout, go <a href="/logout">here</a>.
