@@ -30,9 +30,21 @@ function navDirective () {
 }
 
 
-function navCtrl ($scope) {
+function navCtrl ($scope,$http) {
   console.log("inside NavController");
   console.log("$scope.loggedIn is: " , $scope.loggedin);
+
+  $scope.currentUser;
+
+  $scope.getUser = function() {
+    return $http.get('/currentUser').success(function(user) {
+      angular.copy(user, $scope.currentUser);
+    });
+    $scope.getUser();
+    console.log($scope.currentUser);
+  }
+
+
   // $scope.users = [];
   //
   // $scope.addNew = function (user) {
