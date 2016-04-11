@@ -36,8 +36,6 @@
         Click <a href="/">here</a> for our info/home page.
         <h1>Add a new user and photo</h1>
       </div>
-    </div>
-
       <form name='userForm' ng-submit='addNew(userForm)'> <!-- [1], [2] -->
 
         <input placeholder='Name' ng-model='userForm.name'/> <!-- [3] -->
@@ -49,6 +47,9 @@
           <avatar user='user' />
         </li>
       </ul>
+    </div>
+
+
     </div>
   </body>
 
