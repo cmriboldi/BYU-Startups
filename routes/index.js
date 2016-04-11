@@ -87,11 +87,12 @@ module.exports = function(passport) {
 
   router.get('/currentUser', function(req, res, next) {
     console.log("currentUser is: ", req.user.username);
-    User.findOne({username: req.user.username})
-    .exec(function(err, result) {
-      if(err) {return next(err);}
-      res.send(result);
-    });
+    res.send(req.user);
+    // User.findOne({username: req.user.username})
+    // .exec(function(err, result) {
+    //   if(err) {return next(err);}
+    //   res.send(result);
+    // });
   });
 
   return router;
